@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
+import allProducts from '../../fake-data/all-products.js'
+import Product from './product';
+import Grid from '@mui/material/Unstable_Grid2';
+
 
 function ProductList() {
+
+  const [products, setAllProducts] = useState(allProducts);
   return (
-    <h3>Here is productList!</h3>
+    <div>
+      <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        {products.map((product) => (
+          <Grid xs={4}>
+            <Product product={product} key={product.id} />
+        </Grid>
+        ))}
+        
+      </Grid>
+    </div>
+    
   )
 }
 
