@@ -9,8 +9,8 @@ function App() {
       <header className="App-header">
         <Container>
           <h1>Products!</h1>
-          <Category></Category>
-          <ProductList></ProductList>
+          <Category/>
+          <ProductList/>
         </Container>
         
       </header>
