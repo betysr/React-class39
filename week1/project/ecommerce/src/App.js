@@ -1,6 +1,6 @@
-import Category from "./components/category/category";
 import ProductList from "./components/product/productList";
 import Container from '@mui/material/Container';
+import Category from "./components/category/category";
 
 function App() {
 
@@ -10,7 +10,6 @@ function App() {
         <Container>
           <h1>Products!</h1>
           <Category/>
-          <ProductList/>
         </Container>
         
       </header>
