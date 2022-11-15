@@ -7,13 +7,14 @@ import CardMedia from '@mui/material/CardMedia';
 
 function Product({product}) {
   return (
-    <Card sx={{ maxWidth: 400 }}>
+    <Card>
       <CardContent>
       <CardMedia
         component="img"
-        height="300"
+        height="400"
         image={product.image}
         alt={product.image}
+        
       />
       </CardContent>
       <CardActions>
