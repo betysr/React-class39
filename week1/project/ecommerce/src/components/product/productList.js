@@ -4,16 +4,16 @@ import Product from './product';
 import Grid from '@mui/material/Unstable_Grid2';
 
 
-function ProductList(props) {
+function ProductList({category}) {
 
   const [products, setAllProducts] = useState(allProducts);
   const [selectedProducts, setSelectedProducts] = useState(allProducts);
   
   useEffect(() => {
-    if(props.category){
-      setSelectedProducts(products.filter(product => product.category === props.category));
+    if(category){
+      setSelectedProducts(products.filter(product => product.category === category));
     }
-  }, [props.category]);
+  }, [category]);
 
   return (
     <div>

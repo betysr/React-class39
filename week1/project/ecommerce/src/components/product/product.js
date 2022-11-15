@@ -5,19 +5,19 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 
 
-function Product(props) {
+function Product({product}) {
   return (
     <Card sx={{ maxWidth: 400 }}>
       <CardContent>
       <CardMedia
         component="img"
         height="300"
-        image={props.product.image}
-        alt={props.product.image}
+        image={product.image}
+        alt={product.image}
       />
       </CardContent>
       <CardActions>
-        <p>{props.product.title}</p>
+        <p>{product.title}</p>
       </CardActions>
     </Card>
   );

@@ -1,4 +1,3 @@
-import ProductList from "./components/product/productList";
 import Container from '@mui/material/Container';
 import Category from "./components/category/category";
 
