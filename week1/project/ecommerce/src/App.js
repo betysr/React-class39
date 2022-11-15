@@ -8,10 +8,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Container>
-          <h1>Products!</h1>
           <Category/>
         </Container>
-        
       </header>
     </div>
   );

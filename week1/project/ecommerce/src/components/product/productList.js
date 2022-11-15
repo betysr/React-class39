@@ -17,9 +17,9 @@ function ProductList(props) {
 
   return (
     <div>
-      <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid container rowSpacing={2} columnSpacing={{ xs: 12, sm: 6, md: 4 }}>
         {selectedProducts.map((each,index) => (
-          <Grid key={index} xs={4}>
+          <Grid key={index} xs={12} sm={6} md={4}>
             <Product product={each}/>
           </Grid>
         ))}
