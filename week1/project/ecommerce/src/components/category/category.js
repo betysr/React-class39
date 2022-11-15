@@ -9,8 +9,8 @@ function Category() {
   const [categories, setCategories] = useState(allCategories);
   const [selectedCategory, setSelectedCategory] = useState("");
 
-  const selectCategory = (event) => {
-    setSelectedCategory(event.target.innerText.slice(6).toLowerCase());
+  const selectCategory = (ctgName) => {
+    setSelectedCategory(ctgName);
   }
 
   return (
@@ -18,7 +18,7 @@ function Category() {
       <h1>Products!</h1>
       <Stack spacing={2} direction="row">
         {categories.map((category,index)=>{
-          return <Button key={index} variant="contained" onClick={selectCategory}>{category}</Button>
+          return <Button key={index} variant="contained" onClick={()=>{selectCategory(category.slice(6).toLowerCase())}}>{category.slice(6).toLowerCase()}</Button>
         })}
       </Stack>
       <ProductList category={selectedCategory}/>
