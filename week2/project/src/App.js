@@ -1,4 +1,3 @@
-import Container from '@mui/material/Container';
 import Category from "./components/category/category";
 
 function App() {
@@ -6,9 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Container>
-          <Category/>
-        </Container>
+        <Category/>
       </header>
     </div>
   );
