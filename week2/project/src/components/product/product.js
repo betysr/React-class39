@@ -1,15 +1,15 @@
-import React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
 
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Product({product}) {
+function Product({ product }) {
   return (
     <Link to={`/product/${product.id}`}>
-        <Card>
+      <Card>
         <CardContent>
           <CardMedia
             component="img"
@@ -17,11 +17,11 @@ function Product({product}) {
             image={product.image}
             alt={product.image}
           />
-          </CardContent>
-          <CardActions>
-            <p>{product.title}</p>
-          </CardActions>  
-        </Card>
+        </CardContent>
+        <CardActions>
+          <p>{product.title}</p>
+        </CardActions>
+      </Card>
     </Link>
   );
 }
