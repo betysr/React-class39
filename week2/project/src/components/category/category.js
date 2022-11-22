@@ -3,11 +3,10 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import ProductList from '../product/productList.js';
 
-function Category() {
+function Category({handleSelectedCategory}) {
 
   const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("");
-
+  
   useEffect(() => {
     (async () => {
       const response = await fetch('https://fakestoreapi.com/products/categories');
@@ -16,19 +15,14 @@ function Category() {
     })();
   }, []);
 
-  const selectCategory = (ctgName) => {
-    setSelectedCategory(ctgName);
-  }
-
   return (
     <div>
       <h1>Products!</h1>
       <Stack spacing={2} direction="row">
         {categories.map((category,index)=>{
-          return <Button key={index} variant="contained" onClick={()=>{selectCategory(category)}}>{category}</Button>
+          return <Button key={index} variant="contained" onClick={()=>{handleSelectedCategory(category)}}>{category}</Button>
         })}
       </Stack>
-      <ProductList category={selectedCategory}/>
     </div>
   )
 }

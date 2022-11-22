@@ -1,11 +1,14 @@
 import Category from "./components/category/category";
-
-function App() {
+import React, { useState } from 'react'
+import ProductList from './components/product/productList.js';
+function App() {  
 
   return (
     <div className="App">
       <header className="App-header">
-        <Category/>
+          <div>
+            <ProductList />
+          </div>
       </header>
     </div>
   );
