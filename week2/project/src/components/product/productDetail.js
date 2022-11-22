@@ -1,18 +1,24 @@
 import React, {useEffect, useState} from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import { styled } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
+import Typography from "@mui/material/Typography";
+import Paper from '@mui/material/Paper';
 import {useParams} from "react-router-dom";
 import { RotatingLines } from  'react-loader-spinner';
-import Grid from '@mui/material/Unstable_Grid2';
-import Product from './product';
+
 
 function ProductDetail() {
     const { id } = useParams();
-    console.log("id is:", id);
     const [product, setProduct] = useState({});
     const [loading, setLoading] = useState(true);
+
+    const Img = styled('img')({
+      margin: 'auto',
+      display: 'block',
+      maxWidth: '100%',
+      maxHeight: '100%',
+    });
+
     useEffect(() => {
         try{
             if(id){
@@ -40,14 +46,41 @@ function ProductDetail() {
                 width="150"
                 visible={true}/>
             :
-            <Grid container rowSpacing={2} columnSpacing={{ xs: 12, sm: 6, md: 4 }}>
-                <Grid xs={12} sm={6} md={4}>
-                    <Product product={product}/>
-                </Grid> 
-            </Grid>   
-            }
-        </div>
-    )
+            <Paper
+                sx={{
+                  p: 8,
+                  margin: 'auto',
+                  maxWidth: 900,
+                  flexGrow: 1
+                }}>
+      <Grid container>
+        <Grid item>
+          <Grid sx={{ width: 400, height: 400 }}>
+            <Img alt="complex" src={product.image} />
+          </Grid>
+        </Grid>
+        <Grid item xs={12} sm container>
+          <Grid item xs container direction="column">
+            <Grid item xs>
+              <Typography gutterBottom variant="subtitle1" component="div">
+                {product.title}
+              </Typography>
+              <Typography variant="body2" gutterBottom>
+                {product.description}
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <Typography variant="subtitle1" component="div">
+              €{product.price}
+            </Typography>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Paper>   
+    }
+  </div>
+  )
 }
 
 export default ProductDetail;

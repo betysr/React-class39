@@ -3,14 +3,12 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
-import ProductDetail from './productDetail';
 
+import {Link} from "react-router-dom";
 
 function Product({product}) {
   return (
-    
-      <div>
+    <Link to={`/product/${product.id}`}>
         <Card>
         <CardContent>
           <CardMedia
@@ -24,8 +22,7 @@ function Product({product}) {
             <p>{product.title}</p>
           </CardActions>  
         </Card>
-      </div>
-  
+    </Link>
   );
 }
 
