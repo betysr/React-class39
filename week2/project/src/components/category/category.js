@@ -18,7 +18,6 @@ function Category({handleSelectedCategory}) {
   return (
     <div>
       <h1>Products!</h1>
-      {}
       <Stack spacing={2} direction="row">
         {categories.map((category,index)=>{
           return <Button key={index} variant="contained" onClick={()=>{handleSelectedCategory(category)}}>{category}</Button>
