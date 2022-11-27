@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import ProductList from "../product/productList.js";
 
 function Category({ handleSelectedCategory }) {
   const [categories, setCategories] = useState([]);
