@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { FavoriteProductContext } from "../context/favoriteProductContext";
+import Navigation from "../navigation/navigation";
 import Product from "../product/product.js";
 
 function FavoriteProducts() {
@@ -8,6 +9,7 @@ function FavoriteProducts() {
   return (
     <div>
       <h1>Favourites</h1>
+      <Navigation/>
       <div style={{ width: "30%", height: "30%" }}>
         {favoriteProducts.length !== 0 ? (
           favoriteProducts.map((product, index) => (

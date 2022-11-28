@@ -4,8 +4,8 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Category from "../category/category.js";
 import { RotatingLines } from "react-loader-spinner";
 import { FavoriteProductContext } from "../context/favoriteProductContext";
-import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
+import Navigation from "../navigation/navigation";
+
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -61,16 +61,6 @@ function ProductList() {
 
   return (
     <div>
-      <Link to={`/`}>
-        <Button variant="contained" style={{ float: "right" }}>
-          Product List
-        </Button>
-      </Link>
-      <Link to={`/favorite`}>
-        <Button variant="contained" style={{ float: "right" }}>
-          Favorite Products
-        </Button>
-      </Link>
       {isLoad ? (
         <RotatingLines
           strokeColor="green"
@@ -81,6 +71,7 @@ function ProductList() {
         />
       ) : (
         <div>
+          <Navigation/>
           <Category handleSelectedCategory={handleSelectedCategory} />
           <Grid
             container
