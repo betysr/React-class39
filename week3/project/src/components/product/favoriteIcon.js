@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { FavoriteProductContext } from "../context/favoriteProductContext";
+import { FavoriteProductContext } from "../../context/favoriteProductContext";
 import heartRegular from "../../assets/heart-regular.svg";
 import heartSolid from "../../assets/heart-solid.svg";
 
