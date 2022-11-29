@@ -16,7 +16,7 @@ function ProductList() {
     ? `https://fakestoreapi.com/products/category/${selectedCategory}`
     : `https://fakestoreapi.com/products`;
 
-  const {data, isLoading, error} = useFetch(productUrl);
+  const { data, isLoading, error } = useFetch(productUrl);
 
   return (
     <div>
