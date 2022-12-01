@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.0feedbc7.js",
+    "static/js/787.dcc73137.chunk.js": "/static/js/787.dcc73137.chunk.js",
+    "index.html": "/index.html",
+    "static/media/heart-regular.svg": "/static/media/heart-regular.f358882fac0d14d48e2823e07fe31016.svg",
+    "static/media/heart-solid.svg": "/static/media/heart-solid.70b72c45739e60e9fb16359db455a441.svg",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.0feedbc7.js.map": "/static/js/main.0feedbc7.js.map",
+    "787.dcc73137.chunk.js.map": "/static/js/787.dcc73137.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.0feedbc7.js"
+  ]
+}
